@@ -10,9 +10,9 @@
    <LinearLayout
        android:id="@+id/weather_panel"
        android:orientation="vertical"
-       android:visibility="gone"
        android:layout_width="wrap_content"
-       android:layout_height="wrap_content">
+       android:layout_height="wrap_content"
+       android:visibility="gone">
         <TextView
         android:id="@+id/txt_city_name"
         android:textColor="@color/colorPrimary"
@@ -24,18 +24,18 @@
        <LinearLayout
            android:orientation="horizontal"
            android:layout_width="wrap_content"
-           android:layout_height="wrap_content">
-
+           android:layout_height="wrap_content"
+           android:layout_marginHorizontal="@android:dimen/app_icon_size">
            <ImageView
                android:id="@+id/img_weather"
-               android:layout_width="140dp"
-               android:layout_height="140dp"
+               android:layout_width="100dp"
+               android:layout_height="100dp"
                android:src="@mipmap/ic_launcher" />
            <TextView
                android:id="@+id/txt_temperature"
                android:textColor="@color/colorPrimary"
                android:layout_marginLeft="8dp"
-               android:textSize="70sp"
+               android:textSize="50sp"
                android:textStyle="bold"
                android:text="14 C"
                android:layout_width="wrap_content"

@@ -2,11 +2,8 @@ package com.example.igork.whether.Common;
 
 import android.location.Location;
 
-import com.google.android.gms.location.LocationRequest;
-
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.SimpleTimeZone;
 
 public class Common {
 
@@ -15,7 +12,7 @@ public class Common {
 
     public static String convertUnixToDate(long dt) {
         Date date  = new Date(dt*1000L);
-        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm EEE MM yyyy");
+        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm dd EEE MM yyyy");
         String formatted = sdf.format(date);
         return formatted;
     }
