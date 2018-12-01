@@ -47,8 +47,15 @@ public class WeatherForecastAdapter extends RecyclerView.Adapter<WeatherForecast
         holder.txt_description.setText(new StringBuilder(weatherForecastResult.list.get(position)
         .weather.get(0).getDescription()));
 
-        holder.txt_temperature.setText(new StringBuilder(String.valueOf(weatherForecastResult.list.get(position)
-                .main.getTemp())).append("°C"));
+        double output = (weatherForecastResult.list.get(position)
+                .main.getTemp());
+        output = Math.round(output * 100.0) / 100.0;
+        holder.txt_temperature.setText(new StringBuilder(
+                String.valueOf(output)).append("°C").toString());
+
+       // holder.txt_temperature.setText(new StringBuilder(
+       //         String.valueOf(weatherForecastResult.list.get(position)
+       //         .main.getTemp())).append("°C"));
 
     }
 

@@ -12,6 +12,13 @@ public interface IOpenWheatherMap {
                                                               @Query("lon") String lng,
                                                               @Query("appid") String appid,
                                                               @Query("units") String unit);
+
+    @GET("weather")
+    io.reactivex.Observable<WeatherResult> getWeatherByCity(@Query("q") String CityName,
+                                                              @Query("appid") String appid,
+                                                              @Query("units") String unit);
+
+
     @GET("forecast")
     io.reactivex.Observable<WeatherForecastResult> getForecastWeatherByLatLng(@Query("lat") String lat,
                                                                               @Query("lon") String lng,
@@ -19,3 +26,4 @@ public interface IOpenWheatherMap {
                                                                               @Query("units") String unit);
 
 }
+
